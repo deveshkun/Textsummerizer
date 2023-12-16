@@ -6,14 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Summerizer</title>
+    <link rel="stylesheet" href="../static/stye.css">
 </head>
 <body>
-<form action="index()" method="post">
-    <textarea name="inputdata" cols="30" rows="10" placeholder="Enter your data to summerize" required="required"></textarea>
-    <button type="submit" value="summerize" class="but">Submit</button>
+    <div id="frmmm">
+<form action="{{url_for('summarize')}}" method="post">
+    <h3 id="frmmm">Enter Raw Text</h3>
+    <textarea name="inputdata" cols="30" rows="10" placeholder="Enter your data to summerize" required="required" id="txt1"></textarea>
+    <br><br>
+    <label>Enter length for text</label>
+    <input type="range" min="20" max="1000" value="100" name="maxl" class="slidecontainer" placeholder="Enter Text Length">
+    <br><button type="submit" value="summerize" class="button">Submit</button>
 </form>
-<h3>Summerized Text</h3>
-<textarea rows="10" cols="30" name="result">{{result}}</textarea>
-
+<h3 id="frmmm">Summerized Text</h3>
+<textarea rows="10" cols="30" name="result" id="txt1">{{result}}</textarea>
+</div>
 </body>
 </html>
