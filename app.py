@@ -10,7 +10,7 @@ def summarize():
     if request.method =="POST":
 
         API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
-        headers = {"Authorization": "Bearer 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"}
+        headers = {"Authorization": "Bearer {Mytoken}"}
 
         data = request.form['inputdata']
         maxlen = int(request.form['maxl'])
